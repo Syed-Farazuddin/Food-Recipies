@@ -1,15 +1,20 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Body from "./components/Body.jsx";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Homepage from "./pages/Homepage.jsx";
+import Favorite from "./pages/Favorite.jsx";
+import Details from "./pages/Details.jsx";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Body />
-    </>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/favorites" element={<Favorite />} />
+        <Route path="/recipies/:id" element={<Details />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
