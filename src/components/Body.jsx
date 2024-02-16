@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Card from "./Card";
 import { GlobalContext } from "../context/Context";
 
 function Body() {
