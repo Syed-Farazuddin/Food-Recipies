@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/favorites" element={<Favorite />} />
-        <Route path="/recipies/:id" element={<Details />} />
+        <Route path="/recipy-item/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );

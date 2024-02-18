@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { FaHeart, FaSun, FaHome, FaMoon, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/Context";
@@ -9,11 +9,14 @@ function Navbar() {
     <div
       className={`${
         darkMode ? "bg-black border-b-[1px] border-slate-400" : "bg-rose-200"
-      } font-bold flex gap-4 justify-between items-center p-4  h-full`}
+      } font-bold flex gap-4 justify-between items-center p-4 fixed top-0 right-0 left-0 h-20`}
     >
-      <h1 className="text-2xl text-rose-500 font-serif font-extrabold">
+      <Link
+        to={"/"}
+        className="text-2xl text-rose-500 font-serif font-extrabold"
+      >
         FOOD RECIPIES
-      </h1>
+      </Link>
       <ul className="flex gap-8">
         <form
           className="flex items-center justify-center bg-white rounded-lg px-2 text-black"
@@ -28,9 +31,9 @@ function Navbar() {
             }}
             placeholder="Search for Recipies "
           />
-          <p className="w-8 h-8 rounded-full bg-rose-500  flex justify-center items-center text-white">
+          <button className="w-8 h-8 rounded-full bg-rose-500  flex justify-center items-center text-white">
             <FaSearch />
-          </p>
+          </button>
         </form>
       </ul>
       <ul className="flex justify-evenly gap-4">
