@@ -12,7 +12,7 @@ function Navbar() {
       } font-bold flex gap-4 justify-between items-center p-4 fixed top-0 right-0 left-0 h-20`}
     >
       <Link
-        to={"/"}
+        to={"/Food-Recipies"}
         className="text-2xl text-rose-500 font-serif font-extrabold"
       >
         FOOD RECIPIES

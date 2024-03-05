@@ -15,6 +15,9 @@ function Favorite() {
         <div
           className={`${darkMode ? "bg-slate-800" : "bg-rose-50"} p-10 mt-20`}
         >
+          <h1 className="text-4xl text-rose-500 text-center font-extrabold mb-5">
+            Your favorite dishes
+          </h1>
           <div className="flex flex-wrap gap-8 overflow-hidden justify-center items-center">
             {favoritesData.length > 0 &&
               favoritesData.map((item, index) => (
